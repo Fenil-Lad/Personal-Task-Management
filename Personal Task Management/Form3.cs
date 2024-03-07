@@ -50,9 +50,40 @@ namespace Personal_Task_Management
 
         public void AddTaskInPanel(TaskList task)
         {
-            // Assuming TaskListPanel is a FlowLayoutPanel or Panel
             TaskListPanel.Controls.Add(task);
         }
 
+        private void UserForm_Load(object sender, EventArgs e)
+        {
+            LoadTasksFromFile();
+        }
+
+        private void LoadTasksFromFile()
+        {
+            string filePath = "..\\..\\Credentials\\tasks.txt";
+
+            try
+            {
+                if (File.Exists(filePath))
+                {
+                    string[] taskLines = File.ReadAllLines(filePath);
+
+                    foreach (string taskLine in taskLines)
+                    {
+                        string[] taskInfo = taskLine.Split(',');
+
+                        if (taskInfo.Length == 5)
+                        {
+                            TaskList taskList = new TaskList(taskInfo[0], taskInfo[1], taskInfo[2], taskInfo[3], Convert.ToInt32(taskInfo[4]));
+                            AddTaskInPanel(taskList);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading tasks: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

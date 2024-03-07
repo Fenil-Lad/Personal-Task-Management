@@ -45,6 +45,7 @@
             // 
             // LoginBox
             // 
+            this.LoginBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.LoginBox.Controls.Add(this.ResetPasswordLabel);
             this.LoginBox.Controls.Add(this.LoginBtn);
             this.LoginBox.Controls.Add(this.PasswordLabel);
@@ -63,6 +64,7 @@
             // ResetPasswordLabel
             // 
             this.ResetPasswordLabel.AutoSize = true;
+            this.ResetPasswordLabel.ForeColor = System.Drawing.Color.White;
             this.ResetPasswordLabel.Location = new System.Drawing.Point(138, 346);
             this.ResetPasswordLabel.Name = "ResetPasswordLabel";
             this.ResetPasswordLabel.Size = new System.Drawing.Size(65, 16);
@@ -73,6 +75,8 @@
             // LoginBtn
             // 
             this.LoginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(33)))), ((int)(((byte)(183)))));
+            this.LoginBtn.FlatAppearance.BorderSize = 0;
+            this.LoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginBtn.ForeColor = System.Drawing.Color.White;
             this.LoginBtn.Location = new System.Drawing.Point(128, 288);
             this.LoginBtn.Name = "LoginBtn";
@@ -85,7 +89,8 @@
             // PasswordLabel
             // 
             this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Location = new System.Drawing.Point(55, 211);
+            this.PasswordLabel.ForeColor = System.Drawing.Color.White;
+            this.PasswordLabel.Location = new System.Drawing.Point(55, 208);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(26, 16);
             this.PasswordLabel.TabIndex = 3;
@@ -94,6 +99,7 @@
             // UserLabel
             // 
             this.UserLabel.AutoSize = true;
+            this.UserLabel.ForeColor = System.Drawing.Color.White;
             this.UserLabel.Location = new System.Drawing.Point(55, 146);
             this.UserLabel.Name = "UserLabel";
             this.UserLabel.Size = new System.Drawing.Size(70, 16);
@@ -102,21 +108,26 @@
             // 
             // PasswordBox
             // 
+            this.PasswordBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(46)))));
+            this.PasswordBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PasswordBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordBox.ForeColor = System.Drawing.Color.White;
             this.PasswordBox.Location = new System.Drawing.Point(58, 227);
             this.PasswordBox.Name = "PasswordBox";
             this.PasswordBox.PasswordChar = '*';
-            this.PasswordBox.Size = new System.Drawing.Size(221, 29);
+            this.PasswordBox.Size = new System.Drawing.Size(221, 22);
             this.PasswordBox.TabIndex = 2;
             this.PasswordBox.TextChanged += new System.EventHandler(this.PasswordBox_TextChanged);
             // 
             // UserBox
             // 
-            this.UserBox.BackColor = System.Drawing.Color.White;
+            this.UserBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(46)))));
+            this.UserBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UserBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserBox.ForeColor = System.Drawing.Color.White;
             this.UserBox.Location = new System.Drawing.Point(58, 164);
             this.UserBox.Name = "UserBox";
-            this.UserBox.Size = new System.Drawing.Size(221, 29);
+            this.UserBox.Size = new System.Drawing.Size(221, 22);
             this.UserBox.TabIndex = 1;
             // 
             // TitleLabel
@@ -145,6 +156,7 @@
             // 
             this.DescriptionLabel.AutoSize = true;
             this.DescriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DescriptionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.DescriptionLabel.Location = new System.Drawing.Point(26, 186);
             this.DescriptionLabel.Name = "DescriptionLabel";
             this.DescriptionLabel.Size = new System.Drawing.Size(413, 15);
@@ -155,7 +167,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.LeftBox);
             this.Controls.Add(this.LoginBox);

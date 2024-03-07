@@ -63,31 +63,33 @@
             this.panel1.Controls.Add(this.CreateTaskBtn);
             this.panel1.Location = new System.Drawing.Point(0, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(137, 421);
+            this.panel1.Size = new System.Drawing.Size(144, 421);
             this.panel1.TabIndex = 1;
             // 
             // ClearAllTaskBtn
             // 
-            this.ClearAllTaskBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(33)))), ((int)(((byte)(183)))));
-            this.ClearAllTaskBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ClearAllTaskBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(30)))));
+            this.ClearAllTaskBtn.FlatAppearance.BorderSize = 0;
+            this.ClearAllTaskBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ClearAllTaskBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClearAllTaskBtn.ForeColor = System.Drawing.Color.White;
-            this.ClearAllTaskBtn.Location = new System.Drawing.Point(1, 87);
+            this.ClearAllTaskBtn.Location = new System.Drawing.Point(0, 110);
             this.ClearAllTaskBtn.Name = "ClearAllTaskBtn";
-            this.ClearAllTaskBtn.Size = new System.Drawing.Size(136, 81);
+            this.ClearAllTaskBtn.Size = new System.Drawing.Size(139, 101);
             this.ClearAllTaskBtn.TabIndex = 1;
             this.ClearAllTaskBtn.Text = "Clear all tasks";
             this.ClearAllTaskBtn.UseVisualStyleBackColor = false;
             // 
             // CreateTaskBtn
             // 
-            this.CreateTaskBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(33)))), ((int)(((byte)(183)))));
-            this.CreateTaskBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CreateTaskBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(30)))));
+            this.CreateTaskBtn.FlatAppearance.BorderSize = 0;
+            this.CreateTaskBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CreateTaskBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateTaskBtn.ForeColor = System.Drawing.Color.White;
-            this.CreateTaskBtn.Location = new System.Drawing.Point(1, 0);
+            this.CreateTaskBtn.Location = new System.Drawing.Point(0, 3);
             this.CreateTaskBtn.Name = "CreateTaskBtn";
-            this.CreateTaskBtn.Size = new System.Drawing.Size(136, 81);
+            this.CreateTaskBtn.Size = new System.Drawing.Size(139, 101);
             this.CreateTaskBtn.TabIndex = 0;
             this.CreateTaskBtn.Text = "Create tasks";
             this.CreateTaskBtn.UseVisualStyleBackColor = false;
@@ -115,6 +117,7 @@
             this.Name = "UserForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personal Task Management | Home";
+            this.Load += new System.EventHandler(this.UserForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

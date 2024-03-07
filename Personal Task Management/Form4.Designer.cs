@@ -1,4 +1,6 @@
-﻿namespace Personal_Task_Management
+﻿using System.Windows.Forms;
+
+namespace Personal_Task_Management
 {
     partial class CreateTaskForm
     {
@@ -42,15 +44,23 @@
             // 
             // TaskNameBox
             // 
+            this.TaskNameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(46)))));
+            this.TaskNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TaskNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaskNameBox.ForeColor = System.Drawing.Color.White;
             this.TaskNameBox.Location = new System.Drawing.Point(123, 65);
+            this.TaskNameBox.MaxLength = 50;
             this.TaskNameBox.Name = "TaskNameBox";
-            this.TaskNameBox.Size = new System.Drawing.Size(205, 26);
+            this.TaskNameBox.Size = new System.Drawing.Size(205, 19);
             this.TaskNameBox.TabIndex = 0;
             // 
             // PriorityBox
             // 
+            this.PriorityBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(46)))));
+            this.PriorityBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.PriorityBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PriorityBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PriorityBox.ForeColor = System.Drawing.Color.White;
             this.PriorityBox.FormattingEnabled = true;
             this.PriorityBox.Items.AddRange(new object[] {
             "Low",
@@ -63,11 +73,15 @@
             // 
             // SelectPriorityBox
             // 
+            this.SelectPriorityBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(46)))));
+            this.SelectPriorityBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SelectPriorityBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SelectPriorityBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectPriorityBox.ForeColor = System.Drawing.Color.White;
             this.SelectPriorityBox.FormattingEnabled = true;
             this.SelectPriorityBox.Items.AddRange(new object[] {
             "Incomplete",
-            "Inprogress",
+            "In Progress",
             "Complete"});
             this.SelectPriorityBox.Location = new System.Drawing.Point(123, 172);
             this.SelectPriorityBox.Name = "SelectPriorityBox";
@@ -76,6 +90,8 @@
             // 
             // TaskDuePickerBox
             // 
+            this.TaskDuePickerBox.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
+            this.TaskDuePickerBox.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(30)))));
             this.TaskDuePickerBox.CustomFormat = "yyyy-MM-dd HH:mm:ss";
             this.TaskDuePickerBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TaskDuePickerBox.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -86,7 +102,9 @@
             // 
             // AddTaskBtn
             // 
-            this.AddTaskBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(33)))), ((int)(((byte)(183)))));
+            this.AddTaskBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(30)))));
+            this.AddTaskBtn.FlatAppearance.BorderSize = 0;
+            this.AddTaskBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddTaskBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddTaskBtn.ForeColor = System.Drawing.Color.White;
             this.AddTaskBtn.Location = new System.Drawing.Point(174, 281);
@@ -109,36 +127,45 @@
             // CreateTaskLabel
             // 
             this.CreateTaskLabel.AutoSize = true;
-            this.CreateTaskLabel.Location = new System.Drawing.Point(49, 73);
+            this.CreateTaskLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateTaskLabel.ForeColor = System.Drawing.Color.White;
+            this.CreateTaskLabel.Location = new System.Drawing.Point(25, 71);
             this.CreateTaskLabel.Name = "CreateTaskLabel";
-            this.CreateTaskLabel.Size = new System.Drawing.Size(68, 13);
+            this.CreateTaskLabel.Size = new System.Drawing.Size(84, 16);
             this.CreateTaskLabel.TabIndex = 6;
             this.CreateTaskLabel.Text = "Create Task:";
             // 
             // SelectPriorityLabel
             // 
             this.SelectPriorityLabel.AutoSize = true;
-            this.SelectPriorityLabel.Location = new System.Drawing.Point(49, 125);
+            this.SelectPriorityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectPriorityLabel.ForeColor = System.Drawing.Color.White;
+            this.SelectPriorityLabel.Location = new System.Drawing.Point(25, 123);
             this.SelectPriorityLabel.Name = "SelectPriorityLabel";
-            this.SelectPriorityLabel.Size = new System.Drawing.Size(74, 13);
+            this.SelectPriorityLabel.Size = new System.Drawing.Size(92, 16);
             this.SelectPriorityLabel.TabIndex = 7;
             this.SelectPriorityLabel.Text = "Select Priority:";
             // 
             // SelectStatusLabel
             // 
             this.SelectStatusLabel.AutoSize = true;
-            this.SelectStatusLabel.Location = new System.Drawing.Point(49, 180);
+            this.SelectStatusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectStatusLabel.ForeColor = System.Drawing.Color.White;
+            this.SelectStatusLabel.Location = new System.Drawing.Point(25, 178);
             this.SelectStatusLabel.Name = "SelectStatusLabel";
-            this.SelectStatusLabel.Size = new System.Drawing.Size(73, 13);
+            this.SelectStatusLabel.Size = new System.Drawing.Size(88, 16);
             this.SelectStatusLabel.TabIndex = 8;
             this.SelectStatusLabel.Text = "Select Status:";
             // 
             // SelectDueLabel
             // 
             this.SelectDueLabel.AutoSize = true;
-            this.SelectDueLabel.Location = new System.Drawing.Point(49, 236);
+            this.SelectDueLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.SelectDueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectDueLabel.ForeColor = System.Drawing.Color.White;
+            this.SelectDueLabel.Location = new System.Drawing.Point(25, 234);
             this.SelectDueLabel.Name = "SelectDueLabel";
-            this.SelectDueLabel.Size = new System.Drawing.Size(63, 13);
+            this.SelectDueLabel.Size = new System.Drawing.Size(76, 16);
             this.SelectDueLabel.TabIndex = 9;
             this.SelectDueLabel.Text = "Select Due:";
             // 
@@ -146,6 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(383, 369);
             this.Controls.Add(this.SelectDueLabel);
             this.Controls.Add(this.SelectStatusLabel);

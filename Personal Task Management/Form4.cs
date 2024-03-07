@@ -22,7 +22,7 @@ namespace Personal_Task_Management
         private void AddTaskBtn_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrWhiteSpace(TaskNameBox.Text) ||  string.IsNullOrWhiteSpace(PriorityBox.SelectedItem?.ToString()) || string.IsNullOrWhiteSpace(SelectPriorityBox.SelectedItem?.ToString()))
+            if (string.IsNullOrWhiteSpace(TaskNameBox.Text) || string.IsNullOrWhiteSpace(PriorityBox.SelectedItem?.ToString()) || string.IsNullOrWhiteSpace(SelectPriorityBox.SelectedItem?.ToString()))
             {
                 MessageBox.Show("Please fill out all the required information.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -33,8 +33,9 @@ namespace Personal_Task_Management
                 string priority = PriorityBox.SelectedItem.ToString();
                 string status = SelectPriorityBox.SelectedItem.ToString();
                 DateTime dueDateTime = TaskDuePickerBox.Value;
+                int deleteVar = CountTasksFromFile()+1;
 
-                string taskInfo = $"{taskName},{priority},{status},{dueDateTime.ToString("yyyy-MM-dd HH:mm:ss")}";
+                string taskInfo = $"{taskName},{priority},{status},{dueDateTime.ToString("yyyy-MM-dd HH:mm:ss")},{deleteVar}";
 
                 bool retunedVal = AppendTaskToFile(taskInfo);
                 if (retunedVal)
@@ -43,9 +44,8 @@ namespace Personal_Task_Management
                     PriorityBox.SelectedIndex = -1;
                     SelectPriorityBox.SelectedIndex = -1;
                     TaskDuePickerBox.Value = DateTime.Now;
-                    TaskList taskList = new TaskList(taskName, priority, status, dueDateTime.ToString("MM/dd/yyyy"));
+                    TaskList taskList = new TaskList(taskName, priority, status, dueDateTime.ToString("MM/dd/yyyy"), deleteVar);
                     MessageBox.Show("Task was added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                     UserForm form = Application.OpenForms.OfType<UserForm>().FirstOrDefault();
                     if (form != null)
                     {
@@ -57,6 +57,31 @@ namespace Personal_Task_Management
                 {
                     MessageBox.Show("Error adding task. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+        private int CountTasksFromFile()
+        {
+            string filePath = "..\\..\\Credentials\\tasks.txt";
+
+            try
+            {
+                if (File.Exists(filePath))
+                {
+                    string[] taskLines = File.ReadAllLines(filePath);
+
+                    return taskLines.Length;
+
+                }
+                else
+                { 
+                    return 0; 
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Something went wrong. Contact your Admin.");
+                return -1;
             }
         }
 

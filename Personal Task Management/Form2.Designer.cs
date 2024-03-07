@@ -53,6 +53,7 @@
             // 
             this.UserNamePanel.AutoSize = true;
             this.UserNamePanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserNamePanel.ForeColor = System.Drawing.Color.White;
             this.UserNamePanel.Location = new System.Drawing.Point(18, 65);
             this.UserNamePanel.Name = "UserNamePanel";
             this.UserNamePanel.Size = new System.Drawing.Size(68, 24);
@@ -63,6 +64,7 @@
             // 
             this.UserNameLabel.AutoSize = true;
             this.UserNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserNameLabel.ForeColor = System.Drawing.Color.White;
             this.UserNameLabel.Location = new System.Drawing.Point(21, 46);
             this.UserNameLabel.Name = "UserNameLabel";
             this.UserNameLabel.Size = new System.Drawing.Size(33, 15);
@@ -72,6 +74,7 @@
             // OperationBtn
             // 
             this.OperationBtn.AutoSize = true;
+            this.OperationBtn.ForeColor = System.Drawing.Color.White;
             this.OperationBtn.Location = new System.Drawing.Point(21, 106);
             this.OperationBtn.Name = "OperationBtn";
             this.OperationBtn.Size = new System.Drawing.Size(58, 13);
@@ -131,9 +134,12 @@
             // 
             // NewPasswordBox
             // 
+            this.NewPasswordBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(46)))));
+            this.NewPasswordBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NewPasswordBox.ForeColor = System.Drawing.Color.White;
             this.NewPasswordBox.Location = new System.Drawing.Point(6, 38);
             this.NewPasswordBox.Name = "NewPasswordBox";
-            this.NewPasswordBox.Size = new System.Drawing.Size(160, 20);
+            this.NewPasswordBox.Size = new System.Drawing.Size(160, 13);
             this.NewPasswordBox.TabIndex = 7;
             this.NewPasswordBox.TextChanged += new System.EventHandler(this.NewPasswordBox_TextChanged);
             // 
@@ -141,6 +147,7 @@
             // 
             this.NewPasswordLabel.AutoSize = true;
             this.NewPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewPasswordLabel.ForeColor = System.Drawing.Color.White;
             this.NewPasswordLabel.Location = new System.Drawing.Point(6, 16);
             this.NewPasswordLabel.Name = "NewPasswordLabel";
             this.NewPasswordLabel.Size = new System.Drawing.Size(106, 16);
@@ -149,9 +156,12 @@
             // 
             // NewPasswordGroupBox
             // 
+            this.NewPasswordGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(30)))));
             this.NewPasswordGroupBox.Controls.Add(this.ConfirmChangeBtn);
             this.NewPasswordGroupBox.Controls.Add(this.NewPasswordLabel);
             this.NewPasswordGroupBox.Controls.Add(this.NewPasswordBox);
+            this.NewPasswordGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NewPasswordGroupBox.ForeColor = System.Drawing.Color.White;
             this.NewPasswordGroupBox.Location = new System.Drawing.Point(22, 122);
             this.NewPasswordGroupBox.Name = "NewPasswordGroupBox";
             this.NewPasswordGroupBox.Size = new System.Drawing.Size(173, 105);
@@ -160,7 +170,9 @@
             // 
             // ConfirmChangeBtn
             // 
-            this.ConfirmChangeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(33)))), ((int)(((byte)(183)))));
+            this.ConfirmChangeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(46)))));
+            this.ConfirmChangeBtn.FlatAppearance.BorderSize = 0;
+            this.ConfirmChangeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ConfirmChangeBtn.ForeColor = System.Drawing.Color.White;
             this.ConfirmChangeBtn.Location = new System.Drawing.Point(46, 64);
             this.ConfirmChangeBtn.Name = "ConfirmChangeBtn";
@@ -174,6 +186,7 @@
             // 
             this.LogBoxHeadingLabel.AutoSize = true;
             this.LogBoxHeadingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogBoxHeadingLabel.ForeColor = System.Drawing.Color.White;
             this.LogBoxHeadingLabel.Location = new System.Drawing.Point(353, 46);
             this.LogBoxHeadingLabel.Name = "LogBoxHeadingLabel";
             this.LogBoxHeadingLabel.Size = new System.Drawing.Size(62, 13);
@@ -183,6 +196,7 @@
             // LogInTimeLabel
             // 
             this.LogInTimeLabel.AutoSize = true;
+            this.LogInTimeLabel.ForeColor = System.Drawing.Color.White;
             this.LogInTimeLabel.Location = new System.Drawing.Point(281, 76);
             this.LogInTimeLabel.Name = "LogInTimeLabel";
             this.LogInTimeLabel.Size = new System.Drawing.Size(59, 13);
@@ -192,6 +206,7 @@
             // LogOutTimeLabel
             // 
             this.LogOutTimeLabel.AutoSize = true;
+            this.LogOutTimeLabel.ForeColor = System.Drawing.Color.White;
             this.LogOutTimeLabel.Location = new System.Drawing.Point(427, 76);
             this.LogOutTimeLabel.Name = "LogOutTimeLabel";
             this.LogOutTimeLabel.Size = new System.Drawing.Size(66, 13);
@@ -200,6 +215,8 @@
             // 
             // LogInBox
             // 
+            this.LogInBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(30)))));
+            this.LogInBox.ForeColor = System.Drawing.Color.White;
             this.LogInBox.FormattingEnabled = true;
             this.LogInBox.Location = new System.Drawing.Point(271, 106);
             this.LogInBox.Name = "LogInBox";
@@ -210,6 +227,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(607, 280);
             this.Controls.Add(this.LogInBox);
             this.Controls.Add(this.LogOutTimeLabel);

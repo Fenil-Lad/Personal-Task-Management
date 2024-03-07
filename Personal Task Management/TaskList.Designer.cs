@@ -138,6 +138,7 @@
             this.DeleteLabel.Size = new System.Drawing.Size(50, 18);
             this.DeleteLabel.TabIndex = 8;
             this.DeleteLabel.Text = "Delete";
+            this.DeleteLabel.Click += new System.EventHandler(this.DeleteLabel_Click);
             // 
             // panel1
             // 
