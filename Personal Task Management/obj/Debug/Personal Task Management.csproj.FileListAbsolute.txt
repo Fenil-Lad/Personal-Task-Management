@@ -1,0 +1,14 @@
+C:\Users\ff656\Downloads\Personal Task Management\Personal Task Management\obj\Debug\Personal Task Management.csproj.AssemblyReference.cache
+C:\Users\ff656\Downloads\Personal Task Management\Personal Task Management\obj\Debug\Personal_Task_Management.LoginForm.resources
+C:\Users\ff656\Downloads\Personal Task Management\Personal Task Management\obj\Debug\Personal_Task_Management.Properties.Resources.resources
+C:\Users\ff656\Downloads\Personal Task Management\Personal Task Management\obj\Debug\Personal Task Management.csproj.GenerateResource.cache
+C:\Users\ff656\Downloads\Personal Task Management\Personal Task Management\obj\Debug\Personal Task Management.csproj.CoreCompileInputs.cache
+C:\Users\ff656\Downloads\Personal Task Management\Personal Task Management\bin\Debug\Personal Task Management.exe.config
+C:\Users\ff656\Downloads\Personal Task Management\Personal Task Management\bin\Debug\Personal Task Management.exe
+C:\Users\ff656\Downloads\Personal Task Management\Personal Task Management\bin\Debug\Personal Task Management.pdb
+C:\Users\ff656\Downloads\Personal Task Management\Personal Task Management\obj\Debug\Personal Task Management.exe
+C:\Users\ff656\Downloads\Personal Task Management\Personal Task Management\obj\Debug\Personal Task Management.pdb
+C:\Users\ff656\Downloads\Personal Task Management\Personal Task Management\obj\Debug\Personal_Task_Management.AdminForm.resources
+C:\Users\ff656\Downloads\Personal Task Management\Personal Task Management\obj\Debug\Personal_Task_Management.UserForm.resources
+C:\Users\ff656\Downloads\Personal Task Management\Personal Task Management\obj\Debug\Personal_Task_Management.CreateTaskForm.resources
+C:\Users\ff656\Downloads\Personal Task Management\Personal Task Management\obj\Debug\Personal_Task_Management.TaskList.resources
