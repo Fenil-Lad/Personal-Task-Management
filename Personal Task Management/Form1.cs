@@ -11,6 +11,7 @@ using System.IO;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static System.Windows.Forms.LinkLabel;
 using System.Runtime.CompilerServices;
+using System.Drawing.Drawing2D;
 
 namespace Personal_Task_Management
 {
@@ -19,7 +20,30 @@ namespace Personal_Task_Management
         public LoginForm()
         {
             InitializeComponent();
+            SetFormBorderRadius(this, 15);
         }
+
+        private void SetFormBorderRadius(Form form, int borderRadius)
+        {
+            GraphicsPath path = new GraphicsPath();
+
+            Rectangle bounds = form.ClientRectangle;
+            int diameter = borderRadius * 2;
+            Size size = new Size(diameter, diameter);
+            Rectangle arc = new Rectangle(bounds.Location, size);
+
+            path.AddArc(arc, 180, 90);
+            arc.X = bounds.Right - diameter;
+            path.AddArc(arc, 270, 90);
+            arc.Y = bounds.Bottom - diameter;
+            path.AddArc(arc, 0, 90);
+            arc.X = bounds.Left;
+            path.AddArc(arc, 90, 90);
+
+            form.Region = new Region(path);
+        }
+
+      
 
         public void ShowMainForm()
         {
@@ -237,5 +261,49 @@ namespace Personal_Task_Management
                 MessageBox.Show("Type only numbers. It's a pin.");
             }
         }
+
+        private void CloseBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void MinimizeBtn_Click(object sender, EventArgs e)
+        {
+            // Minimize the form
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void MaximizeBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("The window is already at its maximum size.");
+        }
+
+
+        private bool dragging;
+        private Point dragCursorPoint;
+        private Point dragFormPoint;
+
+
+        private void LoginForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+            dragCursorPoint = Cursor.Position;
+            dragFormPoint = this.Location;
+        }
+
+        private void LoginForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point dif = Point.Subtract(Cursor.Position, new Size(dragCursorPoint));
+                this.Location = Point.Add(dragFormPoint, new Size(dif));
+            }
+        }
+
+        private void LoginForm_MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
+        }
+
     }
 }

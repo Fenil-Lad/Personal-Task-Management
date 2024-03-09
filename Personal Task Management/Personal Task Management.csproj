@@ -99,6 +99,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="TaskList.resx">
       <DependentUpon>TaskList.cs</DependentUpon>
@@ -115,6 +116,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img\redDot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img\redDotBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img\redDot15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img\redDot18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img\yellowDot18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img\greenDot18.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

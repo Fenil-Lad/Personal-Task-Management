@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Drawing;
+using System.Runtime.InteropServices;
 
 namespace Personal_Task_Management
 {
@@ -17,7 +19,6 @@ namespace Personal_Task_Management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
             Application.Run(new LoginForm());
         }
         public static void SaveLogOutTime()

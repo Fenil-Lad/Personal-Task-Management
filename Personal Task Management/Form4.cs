@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Drawing.Drawing2D;
 
 namespace Personal_Task_Management
 {
@@ -16,12 +17,32 @@ namespace Personal_Task_Management
         public CreateTaskForm()
         {
             InitializeComponent();
+            SetFormBorderRadius(this, 15);
+        }
+
+        private void SetFormBorderRadius(Form form, int borderRadius)
+        {
+            GraphicsPath path = new GraphicsPath();
+
+            Rectangle bounds = form.ClientRectangle;
+            int diameter = borderRadius * 2;
+            Size size = new Size(diameter, diameter);
+            Rectangle arc = new Rectangle(bounds.Location, size);
+
+            path.AddArc(arc, 180, 90);
+            arc.X = bounds.Right - diameter;
+            path.AddArc(arc, 270, 90);
+            arc.Y = bounds.Bottom - diameter;
+            path.AddArc(arc, 0, 90);
+            arc.X = bounds.Left;
+            path.AddArc(arc, 90, 90);
+
+            form.Region = new Region(path);
         }
 
 
         private void AddTaskBtn_Click(object sender, EventArgs e)
         {
-
             if (string.IsNullOrWhiteSpace(TaskNameBox.Text) || string.IsNullOrWhiteSpace(PriorityBox.SelectedItem?.ToString()) || string.IsNullOrWhiteSpace(SelectPriorityBox.SelectedItem?.ToString()))
             {
                 MessageBox.Show("Please fill out all the required information.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -45,10 +66,10 @@ namespace Personal_Task_Management
                     SelectPriorityBox.SelectedIndex = -1;
                     TaskDuePickerBox.Value = DateTime.Now;
                     TaskList taskList = new TaskList(taskName, priority, status, dueDateTime.ToString("MM/dd/yyyy"), deleteVar);
-                    MessageBox.Show("Task was added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     UserForm form = Application.OpenForms.OfType<UserForm>().FirstOrDefault();
                     if (form != null)
                     {
+                        form.ShowAndClear();
                         form.AddTaskInPanel(taskList);
                     }
                     this.Hide();
@@ -103,6 +124,21 @@ namespace Personal_Task_Management
                 MessageBox.Show($"Error saving task: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+        }
+
+        private void CloseBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void MinimizeBtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void MaximizeBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("The window is already at its maximum size.");
         }
     }
 }
